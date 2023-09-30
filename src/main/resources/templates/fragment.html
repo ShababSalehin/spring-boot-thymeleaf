@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace/Insert/Include Fragments</title>
+</head>
+
+<body>
+    <header><h1>About Fragments Learning</h1></header>
+    <main>
+        <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, iure ratione rem distinctio reiciendis hic officia, quasi possimus fugiat assumenda natus animi voluptate ea ducimus nemo minus deserunt. Magni minima nobis, possimus exercitationem ut ipsum ullam quisquam autem molestiae ducimus. Officiis quae sequi incidunt aliquam ex beatae obcaecati, cum itaque!</p>
+    </main>
+    <!-- here any replace/insert can also be used -->
+    <footer id="hostTag" th:include="footer::footer1(${title}, ${subtitle})">
+        <p>
+        showing the hostTag
+        </p>
+    </footer>
+    
+   
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Template</title>
+</head>
+
+<body>
+
+    <footer id="fragmentTag">
+        <div class="container" th:fragment="footer1(title, subtitle)">
+
+            <h1 th:text="${title}"></h1>
+            <h1 th:text="${subtitle}"></h1>
+            <h3>
+            Showing the fragement tag1</h3>
+            <h3>
+            Showing the fragement tag2</h3>
+            <h3>
+            Showing the fragement tag3</h3>
+        </div>
+    </footer>
+    
+   
+</body>
+
+</html>

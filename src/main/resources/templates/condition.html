@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statements</title>
+</head>
+
+<body>
+    <h1>About Conditional Statement Learning</h1>
+    <h2>
+        User is <span th:style="${isActive} ? 'color:green': 'color:red'" th:text="${isActive} ? 'Active' : 'Not Active'"></span>
+    </h2>
+
+    <h2 th:if="${gender}=='M'">Male</h2>
+    <h2 th:unless="${gender}=='M'">Female</h2>
+
+    <div th:switch="${#lists.size(mylist)}">
+        <h2 th:case="0">List contains zero element</h2>
+        <h2 th:case="1">List contains one element</h2>
+        <h2 th:case="*">List contains more than one elements</h2>
+    </div>
+   
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example of loop</title>
+</head>
+<body>
+    <h1>Going to traverse elements in collection...</h1>
+    <h3>shabab</h3>
+    <h3 th:text="${namelist}"></h3>
+    <ul>
+        <li th:each="n,status : ${namelist}">
+            <span th:style="${status.odd} ? 'color:red;font-weight:bold' : 'color:yellow' " th:text="${status.index}+' '+ ${n}"></span>
+        </li>
+        <!-- 
+        iteration status types
+        1. index: The current iteration index, starting with 0 (zero)
+        2. count: The number of elements processed so far
+        3. size: The total number of elements in the list
+        4. even/odd: Checks if the current iteration index is even or odd
+        5. first: Checks if the current iteration is the first one
+        6. last: Checks if the current iteration is the last one 
+        -->
+    </ul>
+</body>
+</html>

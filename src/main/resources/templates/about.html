@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+</head>
+<body>
+    <h1>About Spring Boot Learning</h1>
+    <h3>Name of the owner is <span th:text="${name} + ', ' + ${currentDate}"></span> </h3>
+    <p>length of the name is <span th:text="${#strings.length(name)}"></span></p>
+    <h2 th:text="${#strings.toUpperCase(name)}"></h2>
+    <h2 th:text="${#strings.toUpperCase(currentDate)}"></h2>
+
+    <div th:with="a=5, b=10, n=${name}">
+
+        <h1>Value of a is <span th:text="${a}"></span></h1>
+        <h1 th:text="Value of b is '+${b}"></h1>
+        <h2 th:text="'sum of '+${a}+ ' and '+${b}+ ' is '+${a+b}"></h2>
+
+    </div>
+</body>
+</html>
